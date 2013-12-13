@@ -5,18 +5,22 @@ Yaotian.Zheng
 Ericsson Company
 
 * Test1
--1.get
 
--2.put
+-get
 
--3.update
+-put
 
--4.delete
+-update
+
+-delete
 
 * Test2
--1.0001
--2.0002
--3.0003
+
+-0001
+
+-0002
+
+-0003
 
 * Test3
 
