@@ -1,13 +1,29 @@
 package main
 
 import (
-    "github.com/hoisie/web"
+	"fmt"
+	"html/template"
+	"log"
+	"net/http"
 )
 
+type Config struct {
+}
 
-func service(val string) string { return "hello " + val } 
+func configHandler(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("templates/index.html")
+	if err != nil {
+		fmt.Println(err)
+		log.Println(err)
+	}
+	t.Execute(w, nil)
+}
 
 func main() {
-    web.Get("/(.*)", service)
-    web.Run("0.0.0.0:9999")
+	http.Handle("/css/", http.FileServer(http.Dir("static")))
+	http.Handle("/js/", http.FileServer(http.Dir("static")))
+	http.Handle("/images/", http.FileServer(http.Dir("static")))
+
+	http.HandleFunc("/", configHandler)
+	http.ListenAndServe(":8888", nil)
 }
