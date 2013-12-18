@@ -1,64 +1,131 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>index</title>
-</head>
-<script language="javascript" type="text/javascript">
-  function set(){
-    var obj=showModalDialog('test.html',window,'dialogHeight:400px;dialogWidth:600px;center:yes;scroll:yes;help:no;status:no');   
-  }
-</script>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<body>
-	<p><font size="+3">&nbsp;【resource】相关API</font></p><br />
-    <table width="770" border="1" style="border-collapse:collapse">
-      <tr>
-        <td width="110" height="45">&nbsp;</td>
-        <td width="110">id</td>
-        <td width="110">name</td>
-        <td width="110">content</td>
-        <td width="110">URI</td>
-        <td width="110">owner_id</td>
-        <td width="110">invitee_id</td>
-      </tr>
-      <tr>
-        <td height="55">List<br /><a href="#" onclick="set()">设置</a>|<a href="#" onclick="set()">I/O过滤</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-      </tr>
-      <tr>
-        <td height="55">Insert<br /><a href="#" onclick="set()">设置</a>|<a href="#" onclick="set()">I/O过滤</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-      </tr>
-      <tr>
-        <td height="55">Update<br /><a href="#" onclick="set()">设置</a>|<a href="#" onclick="set()">I/O过滤</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-      </tr>
-      <tr>
-        <td height="55">Remove<br /><a href="#" onclick="set()">设置</a>|<a href="#" onclick="set()">I/O过滤</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-        <td><a href="#" onclick="set()">设置</a></td>
-      </tr>
-    </table>
+    <title>Index</title>
 
-</body>
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->    
+	<link href="../static/css/index.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	
+	<div id="wrap">
+		<div class="panel panel-default">
+		  <!-- Default panel contents -->
+		  <div class="panel-heading"><h2>【resource】相关API<h2></div>
+
+			  <!-- Table -->
+			  <table class="table table-hover">
+			  <tr>
+				<td width="110" height="45">&nbsp;</td>
+				<td width="110">id</td>
+				<td width="110">name</td>
+				<td width="110">content</td>
+				<td width="110">URI</td>
+				<td width="110">owner_id</td>
+				<td width="110">invitee_id</td>
+			  </tr>
+			  <tr>
+				<td height="55">List<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+			  </tr>
+			  <tr>
+				<td height="55">Insert<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+			  </tr>
+			  <tr>
+				<td height="55">Update<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+			  </tr>
+			  <tr>
+				<td height="55">Remove<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+	
+	<!--Modal-->
+	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<table class="table">
+					<tr>
+						<td>test</td>
+						<td>test</td>
+						<td>test</td>
+					</tr>
+					<tr>
+						<td>test</td>
+						<td>test</td>
+						<td>test</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<!--footer-->
+	<div id="footer">
+      <div class="container">
+        <p class="text-muted">RestAsServer/Ericsson/Yaotian Zheng & Herman Yan</p>
+      </div>
+    </div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
 </html>
