@@ -3,17 +3,19 @@ package server
 import (
 	"data"
 	"encoding/json"
-	"fmt"
 	"github.com/gorilla/mux"
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 )
+
+var logger = log.New(os.Stdout, "", log.Ldate|log.Lmicroseconds|log.Lshortfile)
 
 type Config struct {
 }
 
-const PathPrefix = "/rest/"
+const PathPrefix = "/"
 
 // badRequest is handled by setting the status code in the reply to StatusBadRequest.
 type badRequest struct{ error }
@@ -36,7 +38,7 @@ func errorHandler(f func(w http.ResponseWriter, r *http.Request) error) http.Han
 		case notFound:
 			http.Error(w, "not found", http.StatusNotFound)
 		default:
-			log.Println(err)
+			logger.Println(err)
 			http.Error(w, "oops", http.StatusInternalServerError)
 		}
 	}
@@ -48,8 +50,9 @@ func RegisterHandlers() {
 	r.HandleFunc(PathPrefix, errorHandler(New)).Methods("POST")
 	r.HandleFunc(PathPrefix+"{id}", errorHandler(GetOne)).Methods("GET")
 	r.HandleFunc(PathPrefix+"{id}", errorHandler(UpdateOne)).Methods("PUT")
+	r.HandleFunc("/help/", Help)
+	r.HandleFunc("/admin/", Admin)
 	http.Handle(PathPrefix, r)
-	http.HandleFunc("/", index)
 
 }
 
@@ -70,11 +73,17 @@ func GetOne(w http.ResponseWriter, r *http.Request) error {
 func UpdateOne(w http.ResponseWriter, r *http.Request) error {
 	return nil
 }
-func index(w http.ResponseWriter, r *http.Request) {
+func Help(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles("templates/help.html")
 	if err != nil {
-		fmt.Println(err)
-		log.Println(err)
+		return
+	}
+	t.Execute(w, nil)
+}
+func Admin(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("templates/admin.html")
+	if err != nil {
+		return
 	}
 	t.Execute(w, nil)
 }
