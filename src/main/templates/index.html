@@ -56,7 +56,10 @@
 				<td width="110">invitee_id</td>
 			  </tr>
 			  <tr>
-				<td height="55">List<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a></td>
+				<td height="55">
+					<button type="button" class="btn btn-xs btn-info">List</button>
+					<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a>
+				</td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
@@ -65,7 +68,10 @@
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 			  </tr>
 			  <tr>
-				<td height="55">Insert<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a></td>
+				<td height="55">
+					<button type="button" class="btn btn-xs btn-info">Insert</button>
+					<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a>
+				</td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
@@ -74,7 +80,10 @@
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 			  </tr>
 			  <tr>
-				<td height="55">Update<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a></td>
+				<td height="55">
+					<button type="button" class="btn btn-xs btn-info">Update</button>
+					<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a>
+				</td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
@@ -83,7 +92,10 @@
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 			  </tr>
 			  <tr>
-				<td height="55">Remove<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a></td>
+				<td height="55">
+					<button type="button" class="btn btn-xs btn-info">Remove</button>
+					<br /><a href="#"" data-toggle="modal" data-target="#myModal">设置</a>|<a href="#"" data-toggle="modal" data-target="#myModal">I/O过滤</a>
+				</td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
 				<td><a href="#"" data-toggle="modal" data-target="#myModal">设置</a></td>
@@ -93,6 +105,44 @@
 			  </tr>
 			</table>
 		</div>
+		<button type="button" class="btn btn-link">添加自定义接口</button><br>
+
+		<!-- State Message Table -->
+		<table class="table table-statemsg">
+			<tr>
+				<td>
+					<button type="button" class="btn btn-xs btn-success">开</button>&nbsp;-&nbsp;接口启用
+				</td>
+				<td>
+					<button type="button" class="btn btn-xs btn-danger">关</button>&nbsp;-&nbsp;接口关闭
+				</td>
+				<td>
+					<button type="button" class="btn btn-xs btn-warning">全</button>&nbsp;-&nbsp;无需认证
+				</td>
+				<td>
+					<button type="button" class="btn btn-xs btn-notice">认</button>&nbsp;-&nbsp;用户认证
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" class="btn btn-xs btn-success">返</button>&nbsp;-&nbsp;返回字段
+				</td>
+				<td>
+					<button type="button" class="btn btn-xs btn-success">入</button>&nbsp;-&nbsp;输入字段
+				</td>
+				<td>
+					<button type="button" class="btn btn-xs btn-danger">必</button>&nbsp;-&nbsp;必填字段
+				</td>
+				<td>
+					<button type="button" class="btn btn-xs btn-info">=</button>&nbsp;-&nbsp;等于匹配
+				</td>
+				<td>
+					<button type="button" class="btn btn-xs btn-info">%</button>&nbsp;-&nbsp;Like匹配
+				</td>
+			</tr>
+		</table>
+
 	</div>
 	
 	<!--Modal-->
@@ -118,7 +168,7 @@
 	<!--footer-->
 	<div id="footer">
       <div class="container">
-        <p class="text-muted">RestAsServer/Ericsson/Yaotian Zheng & Herman Yan</p>
+        <p class="text-muted">Ericsson/RestAsServer/Yaotian Zheng & Herman Yan</p>
       </div>
     </div>
 	

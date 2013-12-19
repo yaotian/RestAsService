@@ -48,3 +48,18 @@ a:hover{
  text-decoration:underline;  /*鼠标放上去有下划线*/
  color:#666666;
 }
+.table-statemsg {
+	width: 60%;
+	margin-bottom: 15px;
+	margin-left:60px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	border: 0px solid #dddddd;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	-webkit-overflow-scrolling: touch;
+}
+.btn-notice {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #eea236;
+}
