@@ -63,3 +63,13 @@ a:hover{
   background-color: #000000;
   border-color: #eea236;
 }
+.modal-dialog {
+  position: relative;
+  z-index: 1050;
+  width: auto;
+  margin-top:150px;
+  margin:150px 500px auto 500px;
+}
+.col-lg-6 {
+  width: 30%;
+}

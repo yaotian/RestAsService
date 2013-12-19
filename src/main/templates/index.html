@@ -27,7 +27,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">RestAsServer</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -135,10 +135,10 @@
 					<button type="button" class="btn btn-xs btn-danger">必</button>&nbsp;-&nbsp;必填字段
 				</td>
 				<td>
-					<button type="button" class="btn btn-xs btn-info">=</button>&nbsp;-&nbsp;等于匹配
+					<button type="button" class="btn btn-xs btn-info">=</button>&nbsp;&nbsp;-&nbsp;等于匹配
 				</td>
 				<td>
-					<button type="button" class="btn btn-xs btn-info">%</button>&nbsp;-&nbsp;Like匹配
+					<button type="button" class="btn btn-xs btn-info">%</button>&nbsp;&nbsp;-&nbsp;Like匹配
 				</td>
 			</tr>
 		</table>
@@ -146,21 +146,29 @@
 	</div>
 	
 	<!--Modal-->
-	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myBigModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
-				<table class="table">
-					<tr>
-						<td>test</td>
-						<td>test</td>
-						<td>test</td>
-					</tr>
-					<tr>
-						<td>test</td>
-						<td>test</td>
-						<td>test</td>
-					</tr>
-				</table>
+				<!-- Default panel contents -->
+		  		<div class="panel-heading"><h2>【resource】相关API</h2></div>
+					<table class="table table_statemsg">
+						<tr>
+							<td><button type="button" class="btn btn-xs btn-success">返</button>&nbsp;-&nbsp;返回字段</td>
+						</td>
+						<tr>
+							<td><button type="button" class="btn btn-xs btn-success">入</button>&nbsp;-&nbsp;输入字段</td>
+						</tr>
+						<tr>
+							<td><button type="button" class="btn btn-xs btn-danger">必</button>&nbsp;-&nbsp;必填字段</td>
+						</tr>
+						<tr>
+							<td><button type="button" class="btn btn-xs btn-info">=</button>&nbsp;&nbsp;-&nbsp;等于匹配</td>
+						</tr>
+						<tr>
+							<td><button type="button" class="btn btn-xs btn-info">%</button>&nbsp;&nbsp;-&nbsp;Like匹配</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
